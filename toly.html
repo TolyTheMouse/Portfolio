@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <title>Toly the Mouse</title>
+    <link rel="icon" type="image/x-icon" href="icon.png">
+    <style>
+        body {
+            background-color: #383d79;
+            text-align: center;
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+
+        h1 {
+            font-size: 36px;
+            margin-top: 10px;
+            color: #383d79;
+            margin-bottom: 0;
+        }
+
+        p {
+            color: #cad0d8;
+        }
+
+        .button {
+            display: inline-block;
+            background-color: #383d79;
+            color: #fff;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition-duration: 0.2s;
+            margin: 40px 10px 10px;
+            text-decoration: none;
+        }
+
+        .button:hover {
+            scale: 1.05;
+        }
+
+        .button:active {
+            scale: 0.95;
+        }
+
+        .flex {
+            display: flex;
+            justify-content: center;
+        }
+
+        .content-wrapper {
+            width: 800px;
+            background: #6f75b4;
+            border-radius: 10px;
+            padding: 20px;
+        }
+
+        .prev, .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            padding: 16px;
+            margin-top: -22px;
+            color: white;
+            font-weight: bold;
+            font-size: 18px;
+            transition: 0.6s ease;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+
+        .prev {
+            left: 0;
+        }
+
+        .next {
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover, .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+
+        .text {
+            color: #f2f2f2;
+            font-size: 15px;
+            padding: 8px 12px;
+            position: absolute;
+            bottom: 8px;
+            width: 100%;
+            text-align: center;
+        }
+
+        br {
+            height: 0;
+        }
+
+        .banner {
+            max-width: 80%;
+        }
+
+        .babylon-canvas {
+            background-color: #383d79;
+            border-radius: 25px;
+        }
+    </style>
+    <script defer src="https://cdn.babylonjs.com/babylon.js"></script>
+    <script defer src="https://cdn.babylonjs.com/loaders/babylonjs.loaders.min.js"></script>
+</head>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap">
+
+<body style="font-family: 'Poppins', sans-serif;">
+<div class="flex">
+    <div class="content-wrapper">
+        <img class="banner" src="toly_banner.webp" alt="Toly Banner">
+
+        <a class="button" href="/mods">Contact me on Discord</a>
+        <a class="button" href="/discord">Become a patron!</a>
+
+        <h1 style="color: black;">
+            About
+        </h1>
+        <p>Hey there! I'm Toly the Mouse, a Spanish 3D designer, and I'm excited to welcome you to my humble online portfolio.
+            Here, you'll find a mix of projects that I've worked on. From character designs to structural design.
+        </p>
+        <br>
+
+        
+        <canvas id="renderCanvas1" class="babylon-canvas"></canvas>
+        <canvas id="renderCanvas2" class="babylon-canvas"></canvas>
+    
+    <script src="babylon-button.js"></script>
+
+    <script style="padding: 10px;">
+        createBabylonInstance("cube", "renderCanvas1");
+        createBabylonInstance("test", "renderCanvas2")
+    </script>
+    
+
+
+    </div>
+</div>
+
+
+</body>
+</html>
